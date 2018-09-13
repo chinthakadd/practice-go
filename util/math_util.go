@@ -1,9 +1,26 @@
 // util is a separate package that reside inside practice-go source code
 // any function defined inside util can be used by main package go files as long as
 // we import util package first.
+
+// A package will be initialised only once even if it is imported from multiple packages.
 package util
 
-import "math"
+import (
+	"fmt"
+	"log"
+	"math"
+)
+
+var packageLevelVar = "PACKAGE_LEVEL"
+
+// Every package can contain a init function.
+// The init function should not have any return type and should not have any parameters.
+func init() {
+	fmt.Println("util package initialized")
+	fmt.Println(packageLevelVar)
+	log.Fatal("Just Saying")
+	// log.Fatal has a oc.exit(1) at the end. So program should end.
+}
 
 // We capitalised the functions Area and Diagonal in the rectangle package.
 // This has a special meaning in Go. Any variable or function which starts
