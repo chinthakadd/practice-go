@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(a)
 
 	// short hand declaration to create array
-	b := [3]int{12, 78, 50}
+	b := []int{12, 78, 50}
 	fmt.Println(b)
 
 	c := [3]int{12}
