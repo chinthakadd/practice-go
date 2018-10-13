@@ -16,7 +16,8 @@ func main() {
 
 	// how to deference a pointer.
 	fmt.Println("value of d is", *d)
+	fmt.Println("Incrementing d")
 	*d++
-	fmt.Println("value of b is", *b)
+	fmt.Println("value of b is", b)
 	fmt.Println("value of a is", *a)
 }
